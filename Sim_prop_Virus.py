@@ -40,14 +40,17 @@ days_counter = int(0)
 infection_track = np.array([infected])
 days = np.array([days_counter])
 daily_infected = np.array([int(1)])
-period = int(10)
+period = int(20)
 
 
 plt.figure('Number of people infected')
 for k in range(period):
     newly_infected = 0
     for i in range(infected):
-        newly_infected = int(convert(choices(x, y, k=1))) + newly_infected
+        # u = int(convert(choices(x, y, k=1)))
+        u = choices(x, y, k=1)
+        w = int(u[0])
+        newly_infected = w + newly_infected
     # print(newly_infected)
     infected = infected + newly_infected
     daily_infected = np.append(daily_infected, newly_infected)
@@ -63,6 +66,7 @@ fontsize = 12
 plt.plot(days, infection_track, 'v')
 plt.ylabel('People infected', fontsize=fontsize)
 plt.xlim((0, period + 1))
+
 plt.subplot(3, 1, 2)
 plt.ylabel('Daily new cases', fontsize=fontsize)
 plt.plot(days, daily_infected, 'v')
@@ -73,5 +77,5 @@ plt.subplot(3, 1, 3)
 plt.plot(infection_track, daily_infected, 'v')
 plt.xlabel('People infected', fontsize=fontsize)
 plt.ylabel('Daily new cases', fontsize=fontsize)
-
+plt.xlim((0, infected+100))
 plt.show()
