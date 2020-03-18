@@ -19,3 +19,8 @@ pipenv run simulation
 ```
 pipenv run lint
 ```
+
+### Install new libs
+```
+pipenv install [library]
+```
