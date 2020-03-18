@@ -1,0 +1,20 @@
+[scripts]
+simulation = "python Sim_prop_Virus.py"
+lint = "flake8"
+
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+flake8 = "*"
+pytest = "*"
+pytest-cov = "*"
+
+[packages]
+matplotlib = "*"
+flake8 = "*"
+
+[requires]
+python_version = "3.8"

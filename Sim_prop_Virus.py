@@ -2,7 +2,6 @@ import matplotlib.pyplot as plt
 import numpy as np
 import math
 from random import choices
-from collections import Counter
 
 plt.rc('xtick', labelsize=14)
 plt.rc('ytick', labelsize=14)
@@ -21,6 +20,7 @@ def convert(x):
     for x in x:
         p = x
     return p
+
 
 n = 20
 x = np.linspace(1, n, n)
@@ -66,4 +66,8 @@ plt.subplot(2, 1, 2)
 plt.ylabel('Daily new cases', fontsize=18)
 plt.plot(days, daily_infected, 'v')
 plt.xlabel('Days', fontsize=18)
+<<<<<<< HEAD
+=======
+plt.ylabel('Number of people infected', fontsize=18)
+>>>>>>> 99c36c7bc83b14013f11665c935f57c6884f3fdb
 plt.show()
