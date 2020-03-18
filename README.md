@@ -3,7 +3,7 @@
 ----
 
 ## Dependencies:
-[PIPENV][https://pipenv.pypa.io/en/latest/]
+[PIPENV](https://pipenv.pypa.io/en/latest/)
 
 ## How to:
 
