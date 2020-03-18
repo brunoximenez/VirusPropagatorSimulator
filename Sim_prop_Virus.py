@@ -2,10 +2,10 @@ import matplotlib.pyplot as plt
 import numpy as np
 import math
 from random import choices
-from collections import Counter
 
 plt.rc('xtick', labelsize=14)
 plt.rc('ytick', labelsize=14)
+
 
 def poisson(lambd, x):
     ret = np.array([])
@@ -14,11 +14,13 @@ def poisson(lambd, x):
         ret = np.append(ret, y)
     return ret
 
+
 def convert(x):
     p = 0
     for x in x:
         p = x
     return p
+
 
 n = 20
 x = np.linspace(1, n, n)
