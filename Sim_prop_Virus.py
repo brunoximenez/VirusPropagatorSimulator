@@ -57,17 +57,21 @@ for k in range(period):
     days = np.append(days, days_counter)
 
 
-
-plt.subplot(2, 1, 1)
+figure = plt.subplot(3, 1, 1)
+plt.tight_layout(h_pad=1.0)
+fontsize = 12
 plt.plot(days, infection_track, 'v')
-plt.ylabel('People infected', fontsize=18)
-
-plt.subplot(2, 1, 2)
-plt.ylabel('Daily new cases', fontsize=18)
+plt.ylabel('People infected', fontsize=fontsize)
+plt.xlim((0, period + 1))
+plt.subplot(3, 1, 2)
+plt.ylabel('Daily new cases', fontsize=fontsize)
 plt.plot(days, daily_infected, 'v')
-plt.xlabel('Days', fontsize=18)
-<<<<<<< HEAD
-=======
-plt.ylabel('Number of people infected', fontsize=18)
->>>>>>> 99c36c7bc83b14013f11665c935f57c6884f3fdb
+plt.xlabel('Days', fontsize=fontsize)
+plt.xlim((0, period + 1))
+
+plt.subplot(3, 1, 3)
+plt.plot(infection_track, daily_infected, 'v')
+plt.xlabel('People infected', fontsize=fontsize)
+plt.ylabel('Daily new cases', fontsize=fontsize)
+
 plt.show()
