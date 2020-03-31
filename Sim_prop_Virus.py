@@ -15,14 +15,7 @@ def poisson(lambd, x):
     return ret
 
 
-def convert(x):
-    p = 0
-    for x in x:
-        p = x
-    return p
-
-
-n = 20
+n = 10
 x = np.linspace(1, n, n)
 average = 0.2
 y = poisson(average, x)
@@ -46,11 +39,12 @@ period = int(20)
 plt.figure('Number of people infected')
 for k in range(period):
     newly_infected = 0
+    print (k)
     for i in range(infected):
-        # u = int(convert(choices(x, y, k=1)))
         u = choices(x, y, k=1)
         w = int(u[0])
         newly_infected = w + newly_infected
+    print (k)
     # print(newly_infected)
     infected = infected + newly_infected
     daily_infected = np.append(daily_infected, newly_infected)
